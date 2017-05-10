@@ -14,3 +14,9 @@ http://www.geeksforgeeks.org/job-sequencing-problem-set-1-greedy-algorithm/
 https://www.careercup.com/question?id=5142448749674496
 
 http://blog.gainlo.co/index.php/2016/07/12/meeting-room-scheduling-problem/
+
+https://hellosmallworld123.wordpress.com/2014/05/30/arranging-the-meeting-room/
+
+Possible approaches to follow:
+- Greedy algorithm
+- Maximum Bipartite Matching 
