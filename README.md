@@ -1,4 +1,4 @@
-# Amazon's-Project
+# Interview Scheduler
 Interview Scheduling Outlook plugin
 
 References:
