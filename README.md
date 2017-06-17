@@ -20,3 +20,25 @@ https://hellosmallworld123.wordpress.com/2014/05/30/arranging-the-meeting-room/
 Possible approaches to follow:
 - Greedy algorithm
 - Maximum Bipartite Matching 
+
+Naive Approach:
+- Sort and concatenate the free time slots of all interviewers into a single list L on the basis of start time with tagged index of the respective interviewer;
+- For all rooms, create minheap of each room on the basis of start time;
+- Initialize a priority queue structure P, to hold the output schedule;
+- For each slot S_i (st_i, fi_i, I_i) i.e. start time, finish time and Interviewer index in L:
+{
+    - Repeat until( (slot found) || (fi_i of slot S_i > finish time of slot in R_j (for all j rooms)))
+    {
+      - Search the slot S_i on the basis of start time in each room minheap R_j;
+    }
+    - If(Slot found)
+    {
+      - Remove slot from respective heap and perform reheapify;  
+      - Add slot with respective room id in P;
+    }
+    - Else
+    {
+      - Continue;
+    }
+}
+  
