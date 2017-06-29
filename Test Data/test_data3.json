@@ -1,0 +1,47 @@
+{
+  "interview_rooms": [
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 10:30",
+      "end_time": "2017-06-20 11:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 10:00",
+      "end_time": "2017-06-20 10:30"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 11:30",
+      "end_time": "2017-06-20 12:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 16:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 11:00",
+      "end_time": "2017-06-20 11:30"
+    }
+  ],
+  "interviewer_slots": [
+    {
+      "login_name": "ghi",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 16:00"
+    },
+    {
+      "login_name": "def",
+      "start_time": "2017-06-20 11:00",
+      "end_time": "2017-06-20 11:30"
+    },
+    {
+      "login_name": "abc",
+      "start_time": "2017-06-20 10:00",
+      "end_time": "2017-06-20 10:30"
+    }
+    
+  ]
+}
