@@ -1,0 +1,52 @@
+{
+  "interview_rooms": [
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 10:30",
+      "end_time": "2017-06-20 11:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 10:00",
+      "end_time": "2017-06-20 10:30"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 11:30",
+      "end_time": "2017-06-20 12:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 16:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 11:00",
+      "end_time": "2017-06-20 11:30"
+    }
+  ],
+  "interviewer_slots": [
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 11:30",
+      "end_time": "2017-06-20 12:00"
+    },
+    {
+      "login_name": "Akanksha.Dwivedi@iiitb.org",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 16:00"
+    },
+    {
+      "login_name": "S.Maneesha@iiitb.org",
+      "start_time": "2017-06-20 11:00",
+      "end_time": "2017-06-20 11:30"
+    },
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 10:15",
+      "end_time": "2017-06-20 10:45"
+    }
+    
+  ]
+}
