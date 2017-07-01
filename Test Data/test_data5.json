@@ -1,0 +1,202 @@
+{
+  "interview_rooms": [
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 14:30",
+      "end_time": "2017-06-20 15:00"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 08:00",
+      "end_time": "2017-06-20 08:30"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 06:00",
+      "end_time": "2017-06-20 06:30"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 17:00",
+      "end_time": "2017-06-20 17:30"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 07:15",
+      "end_time": "2017-06-20 07:45"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 20:05",
+      "end_time": "2017-06-20 20:35"
+    },
+    {
+      "room": "R1",
+      "start_time": "2017-06-20 22:00",
+      "end_time": "2017-06-20 22:30"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 08:15",
+      "end_time": "2017-06-20 08:45"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 10:20",
+      "end_time": "2017-06-20 10:50"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 12:05",
+      "end_time": "2017-06-20 12:35"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 15:30"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 18:00",
+      "end_time": "2017-06-20 18:30"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 16:15",
+      "end_time": "2017-06-20 16:45"
+    },
+    {
+      "room": "R2",
+      "start_time": "2017-06-20 16:45",
+      "end_time": "2017-06-20 17:15"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 07:30",
+      "end_time": "2017-06-20 08:00"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 09:30",
+      "end_time": "2017-06-20 10:00"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 11:25",
+      "end_time": "2017-06-20 11:55"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 13:30",
+      "end_time": "2017-06-20 14:00"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 15:30",
+      "end_time": "2017-06-20 16:00"
+    },
+    {
+      "room": "R3",
+      "start_time": "2017-06-20 19:00",
+      "end_time": "2017-06-20 19:30"
+    }
+
+  ],
+  "interviewer_slots": [
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 06:00",
+      "end_time": "2017-06-20 06:30"
+    },
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 12:10",
+      "end_time": "2017-06-20 12:40"
+    },
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 15:00",
+      "end_time": "2017-06-20 15:30"
+    },
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 21:00",
+      "end_time": "2017-06-20 21:30"
+    },
+    {
+      "login_name": "archana.r@iiitb.org",
+      "start_time": "2017-06-20 22:00",
+      "end_time": "2017-06-20 22:30"
+    },
+    {
+      "login_name": "akanksha.dwivedi@iiitb.org",
+      "start_time": "2017-06-20 07:15",
+      "end_time": "2017-06-20 07:45"
+    },
+    {
+      "login_name": "akanksha.dwivedi@iiitb.org",
+      "start_time": "2017-06-20 10:20",
+      "end_time": "2017-06-20 10:50"
+    },
+    {
+      "login_name": "akanksha.dwivedi@iiitb.org",
+      "start_time": "2017-06-20 13:30",
+      "end_time": "2017-06-20 14:00"
+    },
+    {
+      "login_name": "akanksha.dwivedi@iiitb.org",
+      "start_time": "2017-06-20 17:00",
+      "end_time": "2017-06-20 17:30"
+    },
+    {
+      "login_name": "akanksha.dwivedi@iiitb.org",
+      "start_time": "2017-06-20 08:00",
+      "end_time": "2017-06-20 08:30"
+    },
+    {
+      "login_name": "S.Maneesha@iiitb.org",
+      "start_time": "2017-06-20 08:15",
+      "end_time": "2017-06-20 08:45"
+    },
+    {
+      "login_name": "S.Maneesha@iiitb.org",
+      "start_time": "2017-06-20 11:25",
+      "end_time": "2017-06-20 11:55"
+    },
+    {
+      "login_name": "S.Maneesha@iiitb.org",
+      "start_time": "2017-06-20 14:30",
+      "end_time": "2017-06-20 15:00"
+    },
+    {
+      "login_name": "S.Maneesha@iiitb.org",
+      "start_time": "2017-06-20 18:00",
+      "end_time": "2017-06-20 18:30"
+    },
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 09:30",
+      "end_time": "2017-06-20 10:00"
+    },
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 12:05",
+      "end_time": "2017-06-20 12:35"
+    },
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 16:30",
+      "end_time": "2017-06-20 17:00"
+    },
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 19:00",
+      "end_time": "2017-06-20 19:30"
+    },
+    {
+      "login_name": "Brahmbhatt.Pankaj@iiitb.org",
+      "start_time": "2017-06-20 20:05",
+      "end_time": "2017-06-20 20:35"
+    }    
+  ]
+}
