@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ author }}'s app</title>
+    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='combodate.js') }}"></script>
+  </head>
+
+  <body>
+    <h2>Interviewer Slots:</h2>
+    <br/>
+    <form>
+    Interviewer's Email
+    <input type="email" name= "email">
+    </form>
+    <br/>
+    <form>
+    Interviewer's Free Slot Start Time:
+    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30" type="text">
+    <script>
+    $(function(){
+        $('#datetime24').combodate();  
+    });
+    </script>
+    </form>
+    <br/>
+    <form>
+    Interviewer's Free Slot End Time:
+    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30" type="text">
+    <script>
+    $(function(){
+        $('#datetime24').combodate();  
+    });
+    </script>
+    </form>
+    <br/>
+    <button type="button">
+    	Submit
+    </button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h2>Free Room Slots:</h2>
+    <br/>
+    <form>
+    Room Number:
+    <input type="email" name= "email">
+    </form>
+    <br/>
+    <form>
+    Room's Free Slot Start Time:
+    <input type="datetime-local" name="interviewerSlot">
+    </form>
+    <br/>
+    <form>
+    Room's Free Slot End Time:
+    <input type="datetime-local" name="interviewerSlot">
+    </form>
+    <br/>
+    <button type="button">
+    	Submit
+    </button>
+  </body>
+</html>
