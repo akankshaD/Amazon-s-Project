@@ -1,66 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ author }}'s app</title>
-    <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='moment.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='combodate.js') }}"></script>
+        <title>{{ author }}'s app</title>
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='moment.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='combodate.js') }}"></script>
+
+        <style>
+        .button {
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button4 {background-color: #e7e7e7; color: black;} 
+        </style>
   </head>
 
   <body>
     <h2>Interviewer Slots:</h2>
     <br/>
-    <form>
-    Interviewer's Email
-    <input type="email" name= "email">
+    <form action= "/store_data_interviewer" method="post">
+        Interviewer's Email
+        <input type="email" name= "login_name">
+        <br>
+        <br>
+        Interviewer's Free Slot Start Time:
+        <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="start_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime24').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        Interviewer's Free Slot End Time:
+        <input id="datetime25" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="end_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime25').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        <button class="button button4">Add to Interviewer Slots</button>
     </form>
+
     <br/>
-    <form>
-    Interviewer's Free Slot Start Time:
-    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30" type="text">
-    <script>
-    $(function(){
-        $('#datetime24').combodate();  
-    });
-    </script>
+    <form action="/store_data_rooms" method= "post">
+        <h2>Free Room Slots:</h2>
+        <br/>
+        Room Number:
+        <input type="text" name= "room">
+        <br>
+        <br>
+        Room's Free Slot Start Time:
+        <input id="datetime26" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="start_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime26').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        Room's Free Slot End Time:
+        <input id="datetime27" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="end_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime27').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        <button class="button button4">Add to Room Slots</button>
     </form>
-    <br/>
-    <form>
-    Interviewer's Free Slot End Time:
-    <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30" type="text">
-    <script>
-    $(function(){
-        $('#datetime24').combodate();  
-    });
-    </script>
+    <br>
+
+    <form action="/store_final_data" method="post">
+        <button class="button">Convert To JSON Input</button>
     </form>
-    <br/>
-    <button type="button">
-    	Submit
-    </button>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2>Free Room Slots:</h2>
-    <br/>
-    <form>
-    Room Number:
-    <input type="email" name= "email">
-    </form>
-    <br/>
-    <form>
-    Room's Free Slot Start Time:
-    <input type="datetime-local" name="interviewerSlot">
-    </form>
-    <br/>
-    <form>
-    Room's Free Slot End Time:
-    <input type="datetime-local" name="interviewerSlot">
-    </form>
-    <br/>
-    <button type="button">
-    	Submit
-    </button>
   </body>
 </html>
