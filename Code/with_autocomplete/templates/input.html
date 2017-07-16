@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Interview Scheduler</title>
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery_2.1.1.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='moment.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='combodate.js') }}"></script>
+        <link href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet">
+
+         
+        <!-- Compiled and minified CSS -->
+
+      <!--Import Google Icon Font-->
+
+
+        <style>
+        .button {
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button4 {background-color: #e7e7e7; color: black;} 
+
+
+        .button-container form,
+        .button-container form div {
+            display: inline;
+
+        }
+
+        .button-container button {
+            display: inline;
+            vertical-align: middle;
+        }
+        .leftform
+        {
+            float: left;
+            width:50%
+        }
+        .rightform{
+            float: right;
+            width: 300px;
+        }
+
+        </style>
+         
+        <style>
+        .ui-helper-hidden-accessible { border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px; 
+        }
+        .ui-autocomplete .highlight {
+            text-decoration: underline;
+            color: orange;
+        }
+        .fixed-height {
+            padding: 1px;
+            max-height: 200px;
+            overflow: auto;
+        }
+        .ui-autocomplete-category {
+            font-weight: bold;
+            padding: .2em .4em;
+            margin: .8em 0 .2em;
+            line-height: 1.5;
+        }
+        .ui-menu .ui-menu-item .ui-state-focus {
+          background: #ff0030;
+          border: none;
+          color: #ffffff;
+        }
+        </style>
+      
+  </head>
+
+  <body>
+      
+        <!-- Compiled and minified JavaScript -->
+
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>  
+    <h2>Interviewer Slots:</h2>
+    <br/>
+
+
+
+
+
+
+    <form action= "/store_data_interviewer" method="post">
+    <div >
+        Interviewer's Email
+        <input type="text" name= "autocomplete"  id="autocomplete">
+        <br>
+        <br>
+        Interviewer's Free Slot Start Time:
+        <input id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="start_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime24').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        Interviewer's Free Slot End Time:
+        <input id="datetime25" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="end_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime25').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        <button class="button button4">Add to Interviewer Slots</button>
+        </div>
+    </form>
+
+
+   
+
+
+    
+    <form action="/store_data_rooms" method= "post">
+    <div>
+        <h2>Free Room Slots:</h2>
+        <br/>
+        Room Number:
+        <input type="text" name= "autocomplete2" id="autocomplete2">
+        <br>
+        <br>
+        Room's Free Slot Start Time:
+        <input id="datetime26" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="start_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime26').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        Room's Free Slot End Time:
+        <input id="datetime27" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="end_time" value="00-00-2017 00:00" type="text">
+        <script>
+        $(function(){
+            $('#datetime27').combodate();  
+        });
+        </script>
+        <br>
+        <br>
+        <button class="button button4">Add to Room Slots</button>
+        </div>
+    </form>
+    <br>
+
+    <form action="/store_final_data" method="post">
+        <button class="button">Convert To JSON Input</button>
+    </form>
+
+
+    <!-- LOGIN NAMES -->
+<script type="text/javascript">
+// From: http://stackoverflow.com/questions/17365821/using-jquery-autocomplete-with-flask
+// Highlight matched text: http://salman-w.blogspot.com/2013/12/jquery-ui-autocomplete-examples.html#example-4 
+$(function() {
+    function highlightText(text, $node) {
+                var searchText = $.trim(text).toLowerCase(), currentNode = $node.get(0).firstChild, matchIndex, newTextNode, newSpanNode;
+                while ((matchIndex = currentNode.data.toLowerCase().indexOf(searchText)) >= 0) {
+                    newTextNode = currentNode.splitText(matchIndex);
+                    currentNode = newTextNode.splitText(searchText.length);
+                    newSpanNode = document.createElement("span");
+                    newSpanNode.className = "highlight";
+                    currentNode.parentNode.insertBefore(newSpanNode, currentNode);
+                    newSpanNode.appendChild(newTextNode);
+                }
+            }
+
+
+    $.ajax({
+        url: '{{ url_for("autocomplete") }}'
+        }).done(function (data) {
+            $('#autocomplete').autocomplete({
+                //source: data.json_list,
+                      source: data.matching_results,             
+                minLength: 1
+            }).data("ui-autocomplete")._renderItem = function(ul, item) {
+                var $a = $("<a></a>").text(item.label);
+                highlightText(this.term, $a);
+                console.log("PPPPP")
+                return $("<li></li>").append($a).appendTo(ul);
+            };
+                $( "#autocomplete").blur(function() {
+                var inputValue = $( "#autocomplete" ).val();
+                var idx = jQuery.inArray(inputValue, data.matching_results);
+                if (idx == -1) {
+                    $( "#autocomplete" ).val("");           
+                }
+            });
+    });
+});
+</script>
+
+
+<!-- ROOMS -->
+<script type="text/javascript">
+// From: http://stackoverflow.com/questions/17365821/using-jquery-autocomplete-with-flask
+// Highlight matched text: http://salman-w.blogspot.com/2013/12/jquery-ui-autocomplete-examples.html#example-4 
+$(function() {
+    function highlightText(text, $node) {
+                var searchText = $.trim(text).toLowerCase(), currentNode = $node.get(0).firstChild, matchIndex, newTextNode, newSpanNode;
+                while ((matchIndex = currentNode.data.toLowerCase().indexOf(searchText)) >= 0) {
+                    newTextNode = currentNode.splitText(matchIndex);
+                    currentNode = newTextNode.splitText(searchText.length);
+                    newSpanNode = document.createElement("span");
+                    newSpanNode.className = "highlight";
+                    currentNode.parentNode.insertBefore(newSpanNode, currentNode);
+                    newSpanNode.appendChild(newTextNode);
+                }
+            }
+    $.ajax({
+        url: '{{ url_for("autocomplete2") }}'
+        }).done(function (data) {
+            $('#autocomplete2').autocomplete({
+                //source: data.json_list,
+                      source: data.matching_results,             
+                minLength: 1
+            }).data("ui-autocomplete")._renderItem = function(ul, item) {
+                var $a = $("<a></a>").text(item.label);
+                highlightText(this.term, $a);
+                return $("<li></li>").append($a).appendTo(ul);
+            };
+
+            $( "#autocomplete2").blur(function() {
+                var inputValue = $( "#autocomplete2" ).val();
+                var idx = jQuery.inArray(inputValue, data.matching_results);
+                if (idx == -1) {
+                    $( "#autocomplete2" ).val("");           
+                }
+            });
+    });
+});
+</script>
+
+  </body>
+</html>
