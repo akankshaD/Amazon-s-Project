@@ -1,5 +1,5 @@
 # Interview Scheduler
-Interview Scheduling Outlook plugin
+Interview Scheduler
 
 References:
 
