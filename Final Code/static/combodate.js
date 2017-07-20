@@ -199,7 +199,7 @@
                 shortNames = this.options.template.indexOf('MMM') !== -1,
                 twoDigit = this.options.template.indexOf('MM') !== -1;
                 
-            for(i=mm-1; i<=11; i++) {
+            for(i=mm; i<=11; i++) {
                 if(longNames) {
                     //see https://github.com/timrwood/momentjs.com/pull/36
                     name = moment().date(1).month(i).format('MMMM');
